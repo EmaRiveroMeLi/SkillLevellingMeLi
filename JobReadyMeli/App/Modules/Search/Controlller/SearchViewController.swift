@@ -83,15 +83,21 @@ extension SearchViewController: UISearchBarDelegate {
                 self.service.getProductDetail(id: items) { products in
                     self.listOfProducts = products
                     self.productTable.reloadData()
+                } onError: {
+                    print("error")
                 }
+            } onError: {
+                print("error")
             }
-        } 
+        } onError: {
+            let alert = UIAlertController(title: "Error", message: "Sin conexion a internet.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true)
+        }
     }
 }
 
-//
-//let alert = UIAlertController(title: "My Title", message: "This is my message.", preferredStyle: .alert)
-//alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+
 //self.present(alert, animated: true, completion: nil)
 
 

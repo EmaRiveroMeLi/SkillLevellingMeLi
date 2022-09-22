@@ -44,6 +44,10 @@ class FavouriteViewController: UIViewController {
         service.getProductDetail(id: idString) { data in
             self.products = data
             self.favouriteProductTable.reloadData()
+        } onError: {
+            let alert = UIAlertController(title: "Error", message: "Sin conexion a internet.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true)
         }
     }
     

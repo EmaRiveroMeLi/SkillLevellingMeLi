@@ -11,7 +11,7 @@ import UIKit
 class SearchService {
     
     
-    func getCategory(query: String, onSuccess: @escaping ([CategoryModel]) -> Void){
+    func getCategory(query: String, onSuccess: @escaping ([CategoryModel]) -> Void, onError: () -> Void){
         
         ApiManager.shared.fetchCall(url: "\(Endpoint.categoryEndpoint)\(query)") { response in
             guard let data = response else { return }
@@ -28,7 +28,7 @@ class SearchService {
         }
     }
     
-    func getTopTwenty(id: String, onSuccess: @escaping (String) -> Void) {
+    func getTopTwenty(id: String, onSuccess: @escaping (String) -> Void, onError: () -> Void) {
         
         ApiManager.shared.fetchCall(url: "\(Endpoint.top20Endpoint)\(id)") { response in
             guard let data = response else { return }
@@ -46,7 +46,7 @@ class SearchService {
         }
     }
     
-    func getProductDetail(id: String, onSuccess: @escaping ([Product]) -> Void){
+    func getProductDetail(id: String, onSuccess: @escaping ([Product]) -> Void, onError: () -> Void){
         
         ApiManager.shared.fetchCall(url: "\(Endpoint.productDetailEndpoint)\(id)") { response in
             guard let data = response else { return }
