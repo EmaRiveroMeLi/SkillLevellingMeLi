@@ -94,7 +94,7 @@ class SearchTableViewCell: UITableViewCell {
         NSLayoutConstraint.activate([
             productImage.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 14),
             productImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 11),
-            productImage.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -14),
+            productImage.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor , constant: -14),
             productImage.widthAnchor.constraint(equalToConstant: 131),
             productImage.heightAnchor.constraint(equalToConstant: 131),
             

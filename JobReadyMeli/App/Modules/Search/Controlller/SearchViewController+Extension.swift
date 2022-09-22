@@ -21,10 +21,6 @@ extension SearchViewController: UITableViewDataSource {
         cell.configure(model: model)
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        159
-    }
 }
 
 extension SearchViewController: UITableViewDelegate {

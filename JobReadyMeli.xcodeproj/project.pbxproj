@@ -16,6 +16,7 @@
 		A560FA2828D74B18001F83A6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A560FA2728D74B18001F83A6 /* Endpoint.swift */; };
 		A560FA2B28D7808D001F83A6 /* SearchViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A560FA2A28D7808D001F83A6 /* SearchViewController+Extension.swift */; };
 		A560FA2F28D78282001F83A6 /* SearchTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A560FA2E28D78282001F83A6 /* SearchTabBar.swift */; };
+		A567200B28DC83DA00D9401A /* FavouriteViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A567200A28DC83DA00D9401A /* FavouriteViewController+extension.swift */; };
 		A58B351028D0C9B600A237C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58B350F28D0C9B600A237C9 /* AppDelegate.swift */; };
 		A58B351228D0C9B600A237C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58B351128D0C9B600A237C9 /* SceneDelegate.swift */; };
 		A58B351428D0C9B600A237C9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58B351328D0C9B600A237C9 /* SearchViewController.swift */; };
@@ -44,6 +45,7 @@
 		A560FA2728D74B18001F83A6 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		A560FA2A28D7808D001F83A6 /* SearchViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+Extension.swift"; sourceTree = "<group>"; };
 		A560FA2E28D78282001F83A6 /* SearchTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabBar.swift; sourceTree = "<group>"; };
+		A567200A28DC83DA00D9401A /* FavouriteViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavouriteViewController+extension.swift"; sourceTree = "<group>"; };
 		A58B350C28D0C9B600A237C9 /* JobReadyMeli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JobReadyMeli.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A58B350F28D0C9B600A237C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A58B351128D0C9B600A237C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -335,6 +337,7 @@
 			isa = PBXGroup;
 			children = (
 				A5D42D9C28D8A69400EE58EB /* FavouriteViewController.swift */,
+				A567200A28DC83DA00D9401A /* FavouriteViewController+extension.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				A58B351428D0C9B600A237C9 /* SearchViewController.swift in Sources */,
 				A560FA2F28D78282001F83A6 /* SearchTabBar.swift in Sources */,
 				A58B352E28D0D0EE00A237C9 /* CategoryModel.swift in Sources */,
+				A567200B28DC83DA00D9401A /* FavouriteViewController+extension.swift in Sources */,
 				A5D42DA228D8A79C00EE58EB /* FavouriteTableViewCell.swift in Sources */,
 				A5238AAD28D73FE3000EBD1E /* ExtensionColors.swift in Sources */,
 				A58B353B28D15B9100A237C9 /* MultigetModel.swift in Sources */,

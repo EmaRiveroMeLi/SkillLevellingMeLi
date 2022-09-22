@@ -11,7 +11,7 @@ import Alamofire
 class ApiManager {
     static let shared = ApiManager()
     
-    func fetchCall(url: String, onSuccess: @escaping (Data?) -> Void) {
+    func fetchCall(url: String, onSuccess: @escaping (Data?) -> Void, onError: @escaping (Error) -> Void) {
         AF.request(url, headers: AccessToken.headers).response { response in
             onSuccess(response.data)
         }

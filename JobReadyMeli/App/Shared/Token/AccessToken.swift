@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 struct AccessToken {
-    static let headers: HTTPHeaders = [.authorization(bearerToken: "APP_USR-6247022506591467-092110-57043e5fcc4ce6a6c3d1bddf25d1d4b9-569415814")]
+    static let headers: HTTPHeaders = [.authorization(bearerToken: "APP_USR-6247022506591467-092207-7b37a31e1a3d345b9363e15a855dabc9-569415814")]
 }
 
 

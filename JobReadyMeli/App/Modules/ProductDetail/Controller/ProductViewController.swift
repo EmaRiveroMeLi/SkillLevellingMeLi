@@ -34,6 +34,7 @@ class ProductViewController: UIViewController {
     private lazy var searchButton: UIButton = {
         let aButton = UIButton(frame: CGRect(x: 0, y: 0, width: 28, height: 32))
         aButton.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
+        aButton.addTarget(self, action: #selector(backNavigation), for: .touchDown)
         view.addSubview(aButton)
         aButton.tintColor = .textColorPrimary
         return aButton
@@ -112,8 +113,8 @@ class ProductViewController: UIViewController {
         aLabel.textColor = .textColorDescription
         let string = "Vendedor con identidad verificada"
         let attributedText = NSMutableAttributedString(string: string)
-        attributedText.addAttribute(.foregroundColor, value: UIColor.systemBlue, range: NSRange(location: 14, length: 19))
-        attributedText.addAttribute(.underlineStyle, value: 1, range: NSRange(location: 14, length: 19))
+        attributedText.addAttribute(.foregroundColor, value: UIColor.systemBlue, range: NSRange(location: 13, length: 20))
+        attributedText.addAttribute(.underlineStyle, value: 1, range: NSRange(location: 13, length: 20))
         aLabel.attributedText = attributedText
         aLabel.font = UIFont(name: "ProximaNova-Regular", size: 11)
         aLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -338,11 +339,9 @@ class ProductViewController: UIViewController {
         if let ids = UserDefaults.standard.array(forKey: "listOfFavourites") as? [String] {
             listOfIds = ids
         }
-        let defaults = UserDefaults.standard
         guard let productId = productId else {return}
         listOfIds.append(productId)
-        defaults.set(listOfIds, forKey: "listOfFavourites")
-        print(listOfIds)
+        UserDefaults.standard.set(listOfIds, forKey: "listOfFavourites")
     }
     
     @objc func backNavigation() {

@@ -6,11 +6,12 @@
 //
 
 import Foundation
+import UIKit
 
 class SearchService {
     
     
-    func getCategory(query: String, onSuccess: @escaping ([CategoryModel]) -> Void) {
+    func getCategory(query: String, onSuccess: @escaping ([CategoryModel]) -> Void){
         
         ApiManager.shared.fetchCall(url: "\(Endpoint.categoryEndpoint)\(query)") { response in
             guard let data = response else { return }
@@ -22,6 +23,8 @@ class SearchService {
             } catch {
                 print(String(describing: error))
             }
+        } onError: { error in
+            print(String(describing: error))
         }
     }
     
@@ -38,10 +41,12 @@ class SearchService {
             } catch {
                 print(String(describing: error))
             }
+        } onError: { error in
+            print(String(describing: error))
         }
     }
     
-    func getProductDetail(id: String, onSuccess: @escaping ([Product]) -> Void) {
+    func getProductDetail(id: String, onSuccess: @escaping ([Product]) -> Void){
         
         ApiManager.shared.fetchCall(url: "\(Endpoint.productDetailEndpoint)\(id)") { response in
             guard let data = response else { return }
@@ -53,9 +58,8 @@ class SearchService {
             } catch {
                 print(String(describing: error))
             }
+        } onError: { error in
+            print(String(describing: error))
         }
     }
 }
-
-
-

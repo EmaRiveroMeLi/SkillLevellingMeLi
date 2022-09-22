@@ -20,6 +20,8 @@ class ProductDescriptionService {
             } catch {
                 print(String(describing: error))
             }
+        } onError: { error in
+            print(String(describing: error))
         }
     }
 }

@@ -85,9 +85,14 @@ extension SearchViewController: UISearchBarDelegate {
                     self.productTable.reloadData()
                 }
             }
-        }
+        } 
     }
 }
-                         
+
+//
+//let alert = UIAlertController(title: "My Title", message: "This is my message.", preferredStyle: .alert)
+//alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+//self.present(alert, animated: true, completion: nil)
+
 
 
